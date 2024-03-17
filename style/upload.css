@@ -1,0 +1,218 @@
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.converter-container {
+    max-width: 800px;
+    margin: 20px auto;
+    margin-top: 8rem;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    color: #333;
+    font-size: 2em;
+}
+
+header h1 span {
+    color: #006699;
+}
+
+header p {
+    color: #666;
+    padding: 10px 0;
+}
+
+ol {
+    padding-left: 20px;
+    line-height: 1.6;
+}
+
+
+div.format-selection ul {
+    list-style: none;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #eee;
+}
+
+div.format-selection ul li {
+    background: whitesmoke;
+    padding: 12px;
+    text-align: center;
+    color: #006699;
+    cursor: pointer;
+    padding-right: 0.35rem 0.22rem;
+    border-right: 1px solid #000;
+    border-left: 1px solid #000;
+}
+
+.file-drop-zone {
+    text-align: center;
+    padding: 20px;
+    border: 2px dashed #ddd;
+    margin-top: 20px;
+}
+
+#upload-btn, #clear-btn, #download-btn {
+    background-color: #006699;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#clear-btn {
+    background-color: #ff6666;
+}
+
+footer {
+    text-align: right;
+    padding: 10px 20px;
+}
+
+footer select {
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+}
+
+.drop-area p {
+    padding: 50px 20px;
+    border: 2px dashed #ccc;
+}
+
+@media (max-width: 768px) {
+    div.format-selection ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    div.format-selection ul li {
+        padding: 5px 10px;
+    }
+
+    footer {
+        text-align: center;
+    }
+}
+
+/* Base styles here */
+
+/* Flexible grid layout */
+.converter-container {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+/* Flexible images and media */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Fonts that scale well */
+body {
+    font-size: 16px;
+}
+
+h1 {
+    font-size: 1.5em; /* Scales up or down based on body font size */
+}
+
+@media screen and (max-width: 768px) {
+    /* Adjustments for smaller screens */
+    h1 {
+        font-size: 1.2em;
+    }
+    
+    div.format-selection ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    div.format-selection ul li {
+        flex: 1 1 50%; /* each item will take at least half of the container width */
+        margin-bottom: 10px;
+    }
+    
+    .file-drop-zone button {
+        width: 100%; /* Make buttons full width on small screens */
+        margin: 10px 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Adjustments for very small screens */
+    body {
+        font-size: 14px; /* Smaller base font size */
+    }
+    
+    div.format-selection ul li {
+        flex: 1 1 100%; /* each item will take full width of the container */
+    }
+}
+
+/* Add any additional media queries and responsive design elements as necessary */
+
+
+/* Info Container */
+.info {
+    max-width: 800px;
+    height: 300px;
+    /* background-color: #006699; */
+    margin: 1rem auto;
+    padding-bottom: 1rem;
+    border: 1px solid #000;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.info_img {
+    background-color:#ff6666;
+    background-image: url(/assets/TreeHeight.png);
+    object-fit: cover;
+    background-position: center;
+    background-size: cover;
+}
+
+.info_des {
+    background: rgba(255, 255, 255, 0.265);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-left: 1rem;
+    padding-top: 1.5rem;
+    color: #fff;
+}
+
+.info_des > h1 {
+    font-size: 2rem;
+    
+}
+
+@media (max-width: 768px) {
+     /* info Container */
+     .info {
+        height: 500px;
+        margin: 1rem 0;
+        grid-template-columns: none;
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .info_img {
+        background-size: cover;
+    }
+}

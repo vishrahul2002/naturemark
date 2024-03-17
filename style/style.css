@@ -1,0 +1,347 @@
+
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    line-height: 1.2;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.613), rgba(0, 0, 0, 0.496)),
+    url('/assets/trees3.png'); 
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+:root {
+    /* color */
+    --color-primary: #fff;
+    --color-sec: #6C63FF;
+
+    /* background colors */
+    --bg-primary: #1F2641;
+
+    /* button */
+    --color-btn: #2F3267;
+
+    --transition: all 400ms ease;
+    
+}
+
+/* =========== Utilites =========== */
+
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    font-size: 2.4rem;
+}
+h2 {
+    font-size: 1.5rem;
+}
+
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--color-btn);
+    padding: 0.65rem 1.85rem;
+    border: 1px solid transparent;
+    font-weight: 500;
+    transition: var(--transition);
+    color: #fff;
+    font-size: 1.45rem;
+}
+
+.btn:hover {
+    background: transparent;
+    color: var(--color-primary);
+    border-color: var(var(--color-primary))
+}
+
+.container {
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.display {
+    display: none;
+}
+
+/* =========== Navbar =========== */
+nav {
+    width: 100%;
+    height: 5rem;
+    background: var(--bg-primary);
+    /* overflow: hidden; */
+    position: absolute;
+    top: 0;
+}
+
+.nav__container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.nav__container  .nav__logo {
+    font-size: 2rem;
+}
+
+.nav__menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.nav__menu li a {
+    font-size: 1.3rem;
+    border: 1px solid transparent;
+    transition: var(--transition);
+}
+
+.nav__menu li a:hover {
+    color: var(--color-sec);
+}
+
+
+
+.nav__btn {
+    height: 5rem;
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    display: none;
+}
+
+.display {
+    display: block;
+}
+/* Responsive Navbar */
+@media (max-width: 670px) {
+    .nav__menu {
+        display: none;
+    }
+
+    .nav__container  .nav__logo {
+        font-size: 1.5rem;
+    }
+
+    .nav__container i::before {
+        font-size: 2rem;
+    }
+    .icon {
+        display: block;
+    }
+
+    .icon i {
+        color: #fff;
+        cursor: pointer;
+    }
+
+
+    .nav__menu {
+        z-index: 9999;
+        position: absolute;
+        display: block;
+        left: -100rem;
+        top: 5rem;
+        padding-left: 1rem;
+        padding-bottom: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: var(--bg-primary);
+        width: 100%;
+        transition: var(--transition);
+    }
+
+    .active {
+        left: 0;
+    }
+    
+}
+
+/* =========== End Of Navbar =========== */
+
+
+
+/* =========== Form Section =========== */
+
+.signup{
+    padding-bottom: 2rem;
+}
+
+#signup-link{
+    color: #1F2641;
+    text-decoration: underline;
+}
+
+#signup-link:hover {
+    cursor: pointer;
+    color:#fff;
+}
+
+main {
+    margin-top: 10rem;
+    width: 100%;
+    height: 100vh;
+    color: var(--color-primary);
+}
+
+
+.form_container {
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    max-width: 400px;
+    width: 100%;
+    margin: 5rem auto;  
+    box-shadow: 0 0 10px whitesmoke;
+  }
+  
+  .container .wrapper {
+    width: 100%;
+    color: white
+  }
+
+  #login-form {
+    display: none;
+  }
+  
+  .wrapper h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin: 10px 0;
+    padding-top: 1rem;
+  }
+  
+  .wrapper .inputs {
+    width: 80%;
+    height: 5vh;
+    display: flex;
+    border-radius: 10px;
+    border: 1px solid white;
+    margin: 8% 10%;
+  
+    justify-content: space-between;
+  }
+  
+  .wrapper input {
+    width: 90%;
+    padding-left: 10px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: transparent;
+  
+  }
+  
+  ::placeholder {
+    color: white;
+  }
+  
+  /* Remember Section */
+  
+  .inputs label {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .remfor {
+    display: flex;
+    width: 80%;
+    margin: 0 10%;
+    padding: 0 0;
+    justify-content: space-between;
+  }
+  
+  .remfor .remember {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  .remember label {
+    font-size: 1rem;
+  }
+  
+  .remfor .forgot a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .forgot a:hover {
+    color: rgb(181, 43, 43);
+    text-decoration: underline;
+  }
+  
+  
+  /* Button Section */
+
+  .fbtn {
+    margin: 2rem 10%;
+  }
+  
+  button {
+    width: 80%;
+    height: 6vh;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background-color: #194388;
+    color: white;
+    cursor: pointer;
+    margin: 7% 10%;
+  }
+  
+  button:hover {
+    scale: 0.95;
+    transition: .3s linear;
+  }
+  
+  
+  p {
+    margin: 20px 0;
+    text-align: center;
+  }
+  
+  p span {
+    font-size: 1.2rem;
+  }
+  
+
+  
+
+/* =========== End Of Form Section =========== */
