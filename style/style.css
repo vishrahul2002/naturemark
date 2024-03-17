@@ -199,18 +199,13 @@ nav {
 
 /* =========== Form Section =========== */
 
-.signup{
-    padding-bottom: 2rem;
+.form_header {
+  padding-top: 1.45rem;
+  text-align: center;
 }
 
-#signup-link{
-    color: #1F2641;
-    text-decoration: underline;
-}
-
-#signup-link:hover {
-    cursor: pointer;
-    color:#fff;
+.wrapper > p {
+  padding-bottom: 2rem;
 }
 
 main {
@@ -235,9 +230,6 @@ main {
     color: white
   }
 
-  #login-form {
-    display: none;
-  }
   
   .wrapper h1 {
     text-align: center;
